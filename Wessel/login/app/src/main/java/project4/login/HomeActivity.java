@@ -96,7 +96,10 @@ public class HomeActivity extends AppCompatActivity implements
                 {
                     Toast.makeText(HomeActivity.this, "Congrats: Login Successfull", Toast.LENGTH_LONG).show();
 
-                    //Go to new Acitivity!
+                    //Go to new Activity!
+                    /// Create Intent for SignUpActivity  abd Start The Activity
+                    Intent intentMenu=new Intent(getApplicationContext(),MainMenu.class);
+                    startActivity(intentMenu);
                 }
                 else
                 {
@@ -118,43 +121,7 @@ public class HomeActivity extends AppCompatActivity implements
 
 
 
-    // Method to handleClick Event of Sign In Button
-    /*
-    public void signIn(View V)
-    {
-        final Dialog dialog = new Dialog(HomeActivity.this);
-        dialog.setContentView(R.layout.main);
-        dialog.setTitle("Login");
 
-        // get the Refferences of views
-        textEmail=(EditText).findViewById(R.id.editEmail);
-        textPass=(EditText).findViewById(R.id.editPass);
-
-
-
-
-                // get The User name and Password
-                String userName=textEmail.getText().toString();
-                String password=textPass.getText().toString();
-
-                // fetch the Password form database for respective user name
-                String storedPassword=loginDataBaseAdapter.getSinlgeEntry(userName);
-
-                // check if the Stored password matches with  Password entered by user
-                if(password.equals(storedPassword))
-                {
-                    Toast.makeText(HomeActivity.this, "Congrats: Login Successfull", Toast.LENGTH_LONG).show();
-                    dialog.dismiss();
-                }
-                else
-                {
-                    Toast.makeText(HomeActivity.this, "User Name or Password does not match", Toast.LENGTH_LONG).show();
-                }
-
-
-        dialog.show();
-    }
-    */
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -208,6 +175,11 @@ public class HomeActivity extends AppCompatActivity implements
                 //mStatusTextView.setText(getString(R.string.signed_in_fmt, acct.getDisplayName()));
                 //updateUI(true);
                 Toast.makeText(HomeActivity.this, "Congrats: Login Successfull", Toast.LENGTH_LONG).show();
+
+                //Go to new Activity!
+                /// Create Intent for SignUpActivity  abd Start The Activity
+                Intent intentMenu=new Intent(getApplicationContext(),MainMenu.class);
+                startActivity(intentMenu);
             } else {
                 // Signed out, show unauthenticated UI.
                 //updateUI(false);
