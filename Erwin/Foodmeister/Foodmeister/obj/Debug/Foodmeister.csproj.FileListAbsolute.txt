@@ -1,0 +1,11 @@
+c:\users\erwin\documents\visual studio 2017\Projects\Foodmeister\Foodmeister\bin\Debug\Foodmeister.exe.config
+c:\users\erwin\documents\visual studio 2017\Projects\Foodmeister\Foodmeister\bin\Debug\Foodmeister.exe
+c:\users\erwin\documents\visual studio 2017\Projects\Foodmeister\Foodmeister\bin\Debug\Foodmeister.pdb
+c:\users\erwin\documents\visual studio 2017\Projects\Foodmeister\Foodmeister\obj\Debug\Foodmeister.csprojResolveAssemblyReference.cache
+c:\users\erwin\documents\visual studio 2017\Projects\Foodmeister\Foodmeister\obj\Debug\Foodmeister.Properties.Resources.resources
+c:\users\erwin\documents\visual studio 2017\Projects\Foodmeister\Foodmeister\obj\Debug\Foodmeister.csproj.GenerateResource.Cache
+c:\users\erwin\documents\visual studio 2017\Projects\Foodmeister\Foodmeister\obj\Debug\Foodmeister.exe
+c:\users\erwin\documents\visual studio 2017\Projects\Foodmeister\Foodmeister\obj\Debug\Foodmeister.pdb
+c:\users\erwin\documents\visual studio 2017\Projects\Foodmeister\Foodmeister\obj\Debug\Foodmeister.Browse_menu.resources
+c:\users\erwin\documents\visual studio 2017\Projects\Foodmeister\Foodmeister\obj\Debug\Foodmeister.Logout_menu.resources
+c:\users\erwin\documents\visual studio 2017\Projects\Foodmeister\Foodmeister\obj\Debug\Foodmeister.Bookmarks_menu.resources
