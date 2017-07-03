@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.Views.BookmarksPage"
+             xmlns:vm="clr-namespace:App2.ViewModels;"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <ListView x:Name="BookmarksListView"
+				ItemsSource="{Binding Items}"
+                VerticalOptions="FillAndExpand"
+                HasUnevenRows="true"
+                RefreshCommand="{Binding LoadItemsCommand}"
+                IsPullToRefreshEnabled="true"
+                IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                CachingStrategy="RecycleElement"
+				ItemSelected="OnItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10" Orientation="Horizontal">
+                            <Image Source="{Binding Imagedata}" HeightRequest="100" WidthRequest="150" Aspect="AspectFill" />
+                            <StackLayout >
+                                <Label Text="{Binding Title}"
+                                       LineBreakMode="NoWrap"
+                                       Style="{DynamicResource ListItemTextStyle}"
+                                       FontSize="16"/>
+                                <Label Text="{Binding Serves}"
+                                       LineBreakMode="NoWrap"
+                                       Style="{DynamicResource ListItemDetailTextStyle}"
+                                       FontSize="13"/>
+                                <Label Text=""
+                           AnchorX="{Binding IsVegetarian}"
+                                       LineBreakMode="NoWrap"
+                                       Style="{DynamicResource ListItemDetailTextStyle}"
+                                       FontSize="13"/>
+                                <ContentPage.Resources>
+                                    <ResourceDictionary>
+                                        <Style TargetType="Label">
+                                            <Style.Triggers>
+                                                <Trigger  TargetType="Label"
+                                                           Property="AnchorX" 
+                                                           Value="0">
+                                                    <Setter Property="Text" 
+                                                            Value="Not vegetarian" />
+                                                </Trigger>
+                                                <Trigger  TargetType="Label"
+                                                           Property="AnchorX" 
+                                                           Value="1">
+                                                    <Setter Property="Text" 
+                                                            Value="vegetarian" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </ResourceDictionary>
+                                </ContentPage.Resources>
+                                <StackLayout Orientation="Horizontal">
+
+                                    <Label Text="{Binding Path=Preptimemin, StringFormat='Prep = {0} Min,'}"
+                                           LineBreakMode="NoWrap"
+                                           Style="{DynamicResource ListItemDetailTextStyle}"
+                                           FontSize="13"/>
+                                    <Label Text="{Binding Path=Cookinmin, StringFormat='Cook = {0} Min'}"
+                                            LineBreakMode="NoWrap"
+                                            Style="{DynamicResource ListItemDetailTextStyle}"
+                                            FontSize="13"/>
+
+
+
+
+
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

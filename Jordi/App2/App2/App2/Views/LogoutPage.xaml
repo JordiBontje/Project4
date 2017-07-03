@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.Views.LogoutPage"
+             xmlns:vm="clr-namespace:App2.ViewModels;"
+             Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <vm:BookmarksViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <Button
+            Text="Logout"
+            Clicked="LogoutClicked"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Margin="0,200,0,0"
+            />
+    </StackLayout>
+</ContentPage>
