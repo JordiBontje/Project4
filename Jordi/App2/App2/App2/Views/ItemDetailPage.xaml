@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.Views.ItemDetailPage"
+             Title="{Binding Title}">
+	<StackLayout Spacing="0" Padding="0">
+        <Image Source="{Binding Item.Imagedata}" HeightRequest="150" WidthRequest="100" Aspect="AspectFill" />
+        <StackLayout Orientation="Horizontal" Margin="20,0,20,20">
+            <Label Text="{Binding Path=Item.Cookinmin, StringFormat='Cooking Time = {0} Min,'}" FontSize="Small" TextColor="LightGray"/>
+            <Label Text="{Binding Path=Item.Preptimemin, StringFormat='Preparation Time = {0} Min.'}" FontSize="Small" TextColor="LightGray" />
+        </StackLayout>
+        <Button Text="Bookmark" Clicked="FavouriteClicked" x:Name="Favourite" WidthRequest="100"></Button>
+            <Label Text="Ingredients" FontSize="Medium" TextColor="Black"/>
+        <Label Text="{Binding Item.Ingredients}" FontSize="Small" TextColor="Black"/>
+        <Label Text="Method" FontSize="Medium" TextColor="Black"/>
+        <Label Text="{Binding Item.Method}" FontSize="Small" TextColor="Black"/>
+    </StackLayout>
+</ContentPage>
